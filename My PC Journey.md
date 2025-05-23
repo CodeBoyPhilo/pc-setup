@@ -15,7 +15,7 @@ sudo apt install nvidia-driver-570-open
 ```
 # Installing CUDA Toolkit on Ubuntu24.04
 ```bash
-wget [https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2404/x86_64/cuda-keyring_1](https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2404/x86_64/cuda-keyring_1).1-1_all.deb
+wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2404/x86_64/cuda-keyring_1.1-1_all.deb
 
 sudo dpkg -i cuda-keyring_1.1-1_all.deb
 
@@ -25,6 +25,12 @@ sudo apt-get install nvidia-gds -y
 
 sudo reboot
 ```
+after that, add the following to shell:
+```bash
+export PATH="/usr/local/cuda-12.8/bin:$PATH"
+export LD_LIBRARY_PATH="/usr/local/cuda-12.8/lib64:$LD_LIBRARY_PATH"
+```
+
 # Installing Docker & Container Toolkit on Ubuntu24.04
 install docker:
 ```bash
