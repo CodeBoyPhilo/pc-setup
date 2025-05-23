@@ -14,14 +14,15 @@ sudo apt autoremove --purge
 sudo apt install nvidia-driver-570-open
 ```
 # Installing CUDA Toolkit on Ubuntu24.04
+installing CUDA 12.8
 ```bash
 wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2404/x86_64/cuda-keyring_1.1-1_all.deb
 
 sudo dpkg -i cuda-keyring_1.1-1_all.deb
 
 sudo apt-get update
-sudo apt-get install cuda-toolkit -y 
-sudo apt-get install nvidia-gds -y
+sudo apt-get install cuda-toolkit-12-8 -y 
+sudo apt-get install nvidia-gds-12-8 -y
 
 sudo reboot
 ```
